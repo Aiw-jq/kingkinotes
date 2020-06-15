@@ -21,7 +21,7 @@ public class Client extends Thread{
 
     @Override
     public void run() {
-        new sendMessThread().start();
+//        new sendMessThread().start();
         super.run();
         try {
             // 读Sock里面的数据

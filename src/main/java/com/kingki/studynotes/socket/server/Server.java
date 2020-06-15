@@ -44,19 +44,19 @@ public class Server extends Thread{
         @Override
         public void run(){
             super.run();
-            Scanner scanner=null;
+//            Scanner scanner=null;
             OutputStream out = null;
             try{
                 if(socket != null){
-                    scanner = new Scanner(System.in);
+//                    scanner = new Scanner(System.in);
                     out = socket.getOutputStream();
-                    String in = "";
-                    do {
-                        in = scanner.next();
+                    String in = "你好";
+//                    do {
+//                        in = scanner.next();
                         out.write(("server saying: "+in).getBytes());
-                        out.flush();//清空缓存区的内容
-                    }while (!in.equals("q"));
-                    scanner.close();
+//                        out.flush();//清空缓存区的内容
+//                    }while (!in.equals("q"));
+//                    scanner.close();
                     try{
                         out.close();
                     }catch (IOException e){
